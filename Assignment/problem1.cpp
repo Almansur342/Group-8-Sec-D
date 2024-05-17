@@ -5,11 +5,11 @@ using namespace std;
 signed main() {
     // Input values
     double lambda, theta, d;
-    cout << "Enter the wavelength (in nm): ";
+    cout << "Enter the wavelength (in nm): "<<endl;
     cin >> lambda;
-    cout << "Enter the angle (in degrees): ";
+    cout << "Enter the angle (in degrees): "<<endl;
     cin >> theta;
-    cout << "Enter the distance between the slits (in meters): ";
+    cout << "Enter the distance between the slits (in meters): "<<endl;
     cin >> d;
 
     // Check if wavelength is within the valid range
