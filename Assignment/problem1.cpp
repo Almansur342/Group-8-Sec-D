@@ -3,16 +3,29 @@
 using namespace std;
 
 signed main() {
-    double theta_deg = 45.0; // Angle in degrees
+    // Input values
+    double lambda, theta, d;
+    cout << "Enter the wavelength (in nm): ";
+    cin >> lambda;
+    cout << "Enter the angle (in degrees): ";
+    cin >> theta;
+    cout << "Enter the distance between the slits (in meters): ";
+    cin >> d;
 
-    // Converting the value of theta into radians
-    double theta_rad = theta_deg * M_PI / 180.0;
+    // Check if wavelength is within the valid range
+    if (lambda < 380 or lambda > 750) {
+        cout << "Out of the range. Please enter a valid number." << endl;
+        return 0;
+    }
 
-    // Calculate the ratio of slit width to wavelength
-    double ratio = 1.0 / sin(theta_rad);
+    // Convert angle from degrees to radians
+    double theta_rad = theta * M_PI / 180.0;
+
+    // Calculate order of maxima
+    double m = d * sin(theta_rad) / lambda;
 
     // Output the result
-    cout << "Ratio of slit width to wavelength: " << ratio << endl;
+    cout << m << "-th order maxima" << endl;
 
     return 0;
 }
